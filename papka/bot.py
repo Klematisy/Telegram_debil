@@ -68,7 +68,7 @@ temp2 = math.ceil(float(temp))
 temp = str(temp2)
 
 tim = datetime.datetime.now()
-bot = telebot.TeleBot("")
+bot = telebot.TeleBot("Your Token")  #Enter your token
 
 
 @bot.message_handler(commands=['start'])
