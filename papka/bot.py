@@ -101,6 +101,7 @@ def help(message):
 @bot.message_handler(commands=['Погода🌧'])
 def pogoda(message):
     bot.send_message(message.chat.id, 'В Воронеже сейчас ' + s + ' \nСегодня минимальная температура примерно: ' + temp + ' градусов цельсия\nВлажность около: ' + pont +'%\nСкорость ветра: ' + speed + ' м/с' + l.format(message.from_user, bot.get_me()))
+    bot.send_message(message.chat.id, 'В Воронеже сейчас ' + s + ' \nСегодня минимальная температура примерно: ' + temp + ' градусов цельсия\nВлажность около: ' + pont +'%\nСкорость ветра: ' + speed + ' м/с'.format(message.from_user, bot.get_me()))
     if float(temp) < 5:
         sti1 = open('zima.webp', 'rb')
         bot.send_message(message.chat.id, 'Сегодня холодно, оденься хорошо, чтобы не замёрзнуть!'.format(message.from_user, bot.get_me()))
